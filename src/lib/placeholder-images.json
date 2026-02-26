@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern hospital interior with medical equipment",
+      "imageUrl": "https://images.unsplash.com/photo-1769147555720-71fc71bfc216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8fDE3NzIwOTE3NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern hospital"
+    },
+    {
+      "id": "doctor-profile",
+      "description": "Professional portrait of a male doctor in medical attire",
+      "imageUrl": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZG9jdG9yfGVufDB8fHx8MTc3MjAzNDk4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male doctor"
+    },
+    {
+      "id": "spine-surgery",
+      "description": "Medical illustration or surgery scene of spine",
+      "imageUrl": "https://images.unsplash.com/photo-1745694036015-8d100bed9c05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGluZSUyMHN1cmdlcnl8ZW58MHx8fHwxNzcyMDkxNzU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spine surgery"
+    },
+    {
+      "id": "joint-replacement",
+      "description": "Joint replacement medical concept",
+      "imageUrl": "https://images.unsplash.com/photo-1614274357232-c1336fe66ea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxqb2ludCUyMHJlcGxhY2VtZW50fGVufDB8fHx8MTc3MjA5MTc1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "joint replacement"
+    },
+    {
+      "id": "trauma-care",
+      "description": "Emergency trauma medical care",
+      "imageUrl": "https://images.unsplash.com/photo-1769793153864-d179cdc6299e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmF1bWElMjBjYXJlfGVufDB8fHx8MTc3MjA5MTc1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trauma care"
+    },
+    {
+      "id": "ortho-oncology",
+      "description": "Specialized orthopedic oncology care",
+      "imageUrl": "https://images.unsplash.com/photo-1763310225108-9e16920156f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWRpY2FsJTIwb25jb2xvZ3l8ZW58MHx8fHwxNzcyMDkxNzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "medical oncology"
+    }
+  ]
 }

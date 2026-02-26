@@ -1,0 +1,107 @@
+
+"use client";
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useBooking } from '@/components/booking-context';
+import { MapPin, Phone, Mail, Clock, Calendar } from 'lucide-react';
+
+export default function ContactPage() {
+  const { openBooking } = useBooking();
+
+  return (
+    <div className="pt-20">
+      <section className="bg-primary/5 py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-headline font-bold mb-6">Contact Us</h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Reach out to schedule an appointment or for any medical inquiries. Our team is here to help.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="space-y-12">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-headline font-bold">The Bangalore Hospital</h2>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-xl text-primary">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Address</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      202, Rashtriya Vidyalaya Road, <br />
+                      2nd Block, Basavanagudi, <br />
+                      Bengaluru, Karnataka – 560004
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-xl text-primary">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Phone Numbers</h3>
+                    <p className="text-muted-foreground">+91 802222 3456</p>
+                    <p className="text-muted-foreground">+91 98765 43210 (Direct)</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-xl text-primary">
+                    <Mail size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Email</h3>
+                    <p className="text-muted-foreground">contact@drpoorneshgowda.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-slate-50 p-8 rounded-3xl space-y-6">
+                <h3 className="text-2xl font-headline font-bold flex items-center space-x-2">
+                  <Clock className="text-primary" />
+                  <span>Working Hours</span>
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between border-b pb-2">
+                    <span className="font-medium">Monday – Saturday</span>
+                    <span className="text-primary font-bold">9:00 AM – 8:00 PM</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="font-medium">Sunday</span>
+                    <span className="text-destructive font-bold">Closed (Emergency Only)</span>
+                  </div>
+                </div>
+                <Button onClick={openBooking} className="w-full py-6 rounded-xl text-lg">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book Appointment Now
+                </Button>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="rounded-3xl overflow-hidden soft-shadow border-4 border-white h-[600px] relative bg-slate-200">
+                {/* Embed Map Placeholder */}
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3888.3734184323635!2d77.581559!3d12.947936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15ed83333333%3A0x7333333333333333!2sThe%20Bangalore%20Hospital!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
