@@ -1,2 +1,3 @@
 // Flows will be imported for their side effects in this file.
-import './flows/ortho-assistant-flow';
+// AI features have been disabled per user request.
+export {};
