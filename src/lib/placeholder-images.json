@@ -8,9 +8,9 @@
     },
     {
       "id": "doctor-profile",
-      "description": "Professional portrait of a male doctor in medical attire",
-      "imageUrl": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZG9jdG9yfGVufDB8fHx8MTc3MjAzNDk4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "male doctor"
+      "description": "Professional portrait of a male surgeon in blue surgical scrubs and cap",
+      "imageUrl": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "surgeon scrubs"
     },
     {
       "id": "spine-surgery",
