@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -85,15 +84,14 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="rounded-3xl overflow-hidden soft-shadow border-4 border-white h-[600px] relative bg-slate-200">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3888.3734184323635!2d77.581559!3d12.947936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15ed83333333%3A0x7333333333333333!2sThe%20Bangalore%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3888.397682334749!2d77.57785871141416!3d12.93774571597841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1580d2aba445%3A0x18f2e5ac44fb9bee!2sDr%20Poornesh%20Elite%20Ortho%20%3A%20Best%20Spine%20Surgeon%20Bangalore!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
                   allowFullScreen={true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="The Bangalore Hospital Location"
-                  className="transition-all duration-500"
+                  title="Dr Poornesh Elite Ortho Location"
                 />
               </div>
             </div>

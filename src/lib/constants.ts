@@ -3,16 +3,16 @@
  */
 
 export const CONTACT_INFO = {
-  phone: "+917338604777",
+  phone: "7338604777",
   displayPhone: "+91 73386 04777",
   directPhone: "+91 73386 04777",
   email: "contact@drpoorneshgowda.com",
   address: {
-    hospital: "The Bangalore Hospital",
-    street: "202, Rashtriya Vidyalaya Road, 2nd Block, Basavanagudi",
+    hospital: "Dr Poornesh Elite Ortho",
+    street: "The Bangalore Hospital, Rashtriya Vidyalaya Rd, 2nd Block, Jayanagar",
     city: "Bengaluru",
     state: "Karnataka",
-    pincode: "560004"
+    pincode: "560011"
   },
   registrationNo: "119937 (KMC)"
 };
