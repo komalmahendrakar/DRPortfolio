@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -19,14 +19,23 @@ export const Footer = () => {
               Providing expert surgical and non-surgical orthopedic care for over 9 years. Committed to restoring your mobility and quality of life.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-primary transition-colors text-slate-400 hover:text-white">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-primary transition-colors text-slate-400 hover:text-white">
+              <a 
+                href="https://www.instagram.com/dr.poornesh/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-primary transition-colors text-slate-400 hover:text-white"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-primary transition-colors text-slate-400 hover:text-white">
-                <Twitter size={20} />
+              <a 
+                href="https://www.linkedin.com/in/dr-poornesh-gowda-ms-395865238/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-primary transition-colors text-slate-400 hover:text-white"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
