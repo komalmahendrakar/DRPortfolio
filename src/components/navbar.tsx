@@ -4,11 +4,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { useBooking } from './booking-context';
 import { Menu, X, Phone } from 'lucide-react';
 
 export const Navbar = () => {
-  const { openBooking } = useBooking();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,8 +25,10 @@ export const Navbar = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const phoneNumber = "+918022223456";
+
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex flex-col">
           <span className="text-xl md:text-2xl font-headline font-bold text-primary leading-none">Dr. Poornesh Gowda</span>
@@ -42,14 +42,14 @@ export const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button onClick={openBooking} variant="default" className="rounded-full px-6">
-            Book Appointment
+          <Button asChild variant="default" className="rounded-full px-6">
+            <a href={`tel:${phoneNumber}`}>Book Appointment</a>
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-           <a href="tel:+918022223456" className="text-primary">
+           <a href={`tel:${phoneNumber}`} className="text-primary">
             <Phone size={20} />
           </a>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
@@ -66,8 +66,8 @@ export const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button onClick={() => { openBooking(); setIsMobileMenuOpen(false); }} className="w-full py-6 rounded-xl">
-            Book Appointment
+          <Button asChild className="w-full py-6 rounded-xl">
+            <a href={`tel:${phoneNumber}`}>Call to Book</a>
           </Button>
         </div>
       )}

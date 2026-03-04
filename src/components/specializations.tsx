@@ -3,9 +3,8 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
-import { Bone, Activity, Ambulance, Microscope, Zap, Thermometer } from 'lucide-react';
+import { Bone, Activity, Ambulance, Microscope, Zap, Thermometer, Phone } from 'lucide-react';
 import { Button } from './ui/button';
-import { useBooking } from './booking-context';
 
 const specializations = [
   {
@@ -47,7 +46,7 @@ const specializations = [
 ];
 
 export const Specializations = () => {
-  const { openBooking } = useBooking();
+  const phoneNumber = "+918022223456";
 
   return (
     <section className="py-24 bg-white" id="specializations">
@@ -72,11 +71,14 @@ export const Specializations = () => {
                   {spec.desc}
                 </CardDescription>
                 <Button 
+                  asChild
                   variant="ghost" 
                   className="p-0 h-auto font-semibold text-primary group-hover:translate-x-1 transition-transform"
-                  onClick={openBooking}
                 >
-                  Learn More & Book →
+                  <a href={`tel:${phoneNumber}`} className="flex items-center">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call to Book →
+                  </a>
                 </Button>
               </CardContent>
             </Card>

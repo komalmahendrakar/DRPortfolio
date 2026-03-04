@@ -5,8 +5,7 @@ import React from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { useBooking } from '@/components/booking-context';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Phone } from 'lucide-react';
 
 const services = [
   {
@@ -40,7 +39,7 @@ const services = [
 ];
 
 export default function ServicesPage() {
-  const { openBooking } = useBooking();
+  const phoneNumber = "+918022223456";
 
   return (
     <div className="pt-20">
@@ -72,7 +71,12 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <Button onClick={openBooking} size="lg" className="rounded-full px-8">Book Consultation</Button>
+                  <Button asChild size="lg" className="rounded-full px-8">
+                    <a href={`tel:${phoneNumber}`}>
+                      <Phone className="mr-2 h-4 w-4" />
+                      Call to Book Consultation
+                    </a>
+                  </Button>
                 </div>
 
                 <div className={`relative ${idx % 2 !== 0 ? 'lg:order-1' : ''}`}>
@@ -97,7 +101,9 @@ export default function ServicesPage() {
          <div className="container mx-auto px-4 text-center space-y-8">
             <h2 className="text-3xl font-headline font-bold">Ready to take the first step towards recovery?</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">We provide comprehensive diagnostics and personalized treatment plans for every patient.</p>
-            <Button onClick={openBooking} variant="secondary" size="lg" className="rounded-full px-12 py-7 text-lg">Schedule Your Visit Now</Button>
+            <Button asChild variant="secondary" size="lg" className="rounded-full px-12 py-7 text-lg">
+              <a href={`tel:${phoneNumber}`}>Schedule Your Visit Now</a>
+            </Button>
          </div>
       </section>
     </div>

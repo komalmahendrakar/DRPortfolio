@@ -4,11 +4,12 @@ import { Specializations } from '@/components/specializations';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { CheckCircle, ShieldCheck, Clock, Users, Globe } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Clock, Users, Globe, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
   const profileImg = PlaceHolderImages.find(img => img.id === 'doctor-profile');
+  const phoneNumber = "+918022223456";
 
   const stats = [
     { label: "Experience", value: "9+ Years", icon: ShieldCheck },
@@ -91,10 +92,15 @@ export default function Home() {
               </div>
 
               <div className="flex space-x-4">
+                <Button asChild size="lg" className="rounded-full px-8">
+                  <a href={`tel:${phoneNumber}`}>
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call for Appointment
+                  </a>
+                </Button>
                 <Link href="/contact">
-                  <Button size="lg" className="rounded-full px-8">Visit Clinic</Button>
+                  <Button variant="outline" size="lg" className="rounded-full px-8">Visit Clinic</Button>
                 </Link>
-                <Button variant="outline" size="lg" className="rounded-full px-8">View Credentials</Button>
               </div>
             </div>
           </div>
@@ -141,7 +147,7 @@ export default function Home() {
             {[
               { q: "Is spine surgery always necessary for back pain?", a: "No, surgery is typically the last resort. Most back pain cases are treated with physiotherapy, medication, and lifestyle adjustments. Surgery is only recommended when conservative treatments fail or neurological symptoms are present." },
               { q: "How long is the recovery period for knee replacement?", a: "Most patients can start walking with support within 24 hours of surgery. Full recovery and returning to normal activities usually takes about 6 to 12 weeks with consistent rehabilitation." },
-              { q: "Do you offer video consultations?", a: "Yes, we offer video consultations for follow-ups and initial discussions for patients who cannot travel to the hospital." },
+              { q: "Do you offer video consultations?", a: "Yes, we offer video consultations for follow-ups and initial discussions for patients who cannot travel to the hospital. Please call to schedule." },
               { q: "Which hospital is Dr. Gowda affiliated with?", a: "Dr. Poornesh Gowda is primarily associated with The Bangalore Hospital in Basavanagudi, Bengaluru." },
             ].map((faq, i) => (
               <details key={i} className="group border rounded-2xl p-6 hover:bg-slate-50 transition-colors">
@@ -164,8 +170,8 @@ export default function Home() {
             <p className="text-lg opacity-90">Our emergency team at The Bangalore Hospital is available 24/7 for critical orthopedic injuries.</p>
           </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-             <Button size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg">
-                <a href="tel:+918022223456" className="flex items-center">
+             <Button asChild size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg">
+                <a href={`tel:${phoneNumber}`} className="flex items-center">
                   Emergency: 080-2222 3456
                 </a>
              </Button>

@@ -1,16 +1,14 @@
-
 "use client";
 
 import React from 'react';
 import { Button } from './ui/button';
-import { useBooking } from './booking-context';
 import { Phone, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const Hero = () => {
-  const { openBooking } = useBooking();
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
+  const phoneNumber = "+918022223456";
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
@@ -38,12 +36,14 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-            <Button onClick={openBooking} size="lg" className="w-full sm:w-auto rounded-full px-8 py-7 text-lg soft-shadow transition-all hover:scale-105">
-              Book Appointment
-              <ChevronRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="w-full sm:w-auto rounded-full px-8 py-7 text-lg soft-shadow transition-all hover:scale-105">
+              <a href={`tel:${phoneNumber}`} className="flex items-center">
+                Book Appointment
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-8 py-7 text-lg group bg-white border-2">
-              <a href="tel:+918022223456" className="flex items-center">
+              <a href={`tel:${phoneNumber}`} className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-primary transition-transform group-hover:rotate-12" />
                 Call Now
               </a>
