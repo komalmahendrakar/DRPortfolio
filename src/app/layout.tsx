@@ -5,6 +5,7 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { BookingProvider } from '@/components/booking-context';
 import { Toaster } from '@/components/ui/toaster';
+import { AIChat } from '@/components/ai-chat';
 
 export const metadata: Metadata = {
   title: 'Dr. Poornesh Gowda | Orthopedic & Spine Surgeon',
@@ -31,6 +32,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <Toaster />
+          <AIChat />
         </BookingProvider>
       </body>
     </html>
