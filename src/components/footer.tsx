@@ -1,9 +1,9 @@
-
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export const Footer = () => {
   return (
@@ -65,15 +65,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-slate-400">
                 <MapPin className="text-primary mt-1 shrink-0" size={18} />
-                <span>The Bangalore Hospital, 202, RV Road, Basavanagudi, Bengaluru - 560004</span>
+                <span>{CONTACT_INFO.address.hospital}, {CONTACT_INFO.address.street}, {CONTACT_INFO.address.city} - {CONTACT_INFO.address.pincode}</span>
               </li>
               <li className="flex items-center space-x-3 text-slate-400">
                 <Phone className="text-primary shrink-0" size={18} />
-                <span>+91 802222 3456</span>
+                <span>{CONTACT_INFO.displayPhone}</span>
               </li>
               <li className="flex items-center space-x-3 text-slate-400">
                 <Mail className="text-primary shrink-0" size={18} />
-                <span>contact@drpoorneshgowda.com</span>
+                <span>{CONTACT_INFO.email}</span>
               </li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export const Footer = () => {
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-slate-500 text-sm">
           <p>© {new Date().getFullYear()} OrthoSpine Connect. All rights reserved.</p>
           <div className="flex items-center space-x-2">
-            <span className="bg-slate-800 px-3 py-1 rounded text-xs font-mono">Registration No: 119937 (KMC)</span>
+            <span className="bg-slate-800 px-3 py-1 rounded text-xs font-mono">Registration No: {CONTACT_INFO.registrationNo}</span>
           </div>
         </div>
       </div>

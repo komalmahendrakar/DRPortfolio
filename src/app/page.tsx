@@ -1,4 +1,3 @@
-
 import { Hero } from '@/components/hero';
 import { Specializations } from '@/components/specializations';
 import { Button } from '@/components/ui/button';
@@ -6,10 +5,10 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { CheckCircle, ShieldCheck, Clock, Users, Globe, Phone } from 'lucide-react';
 import Link from 'next/link';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Home() {
   const profileImg = PlaceHolderImages.find(img => img.id === 'doctor-profile');
-  const phoneNumber = "+918022223456";
 
   const stats = [
     { label: "Experience", value: "9+ Years", icon: ShieldCheck },
@@ -93,7 +92,7 @@ export default function Home() {
 
               <div className="flex space-x-4">
                 <Button asChild size="lg" className="rounded-full px-8">
-                  <a href={`tel:${phoneNumber}`}>
+                  <a href={`tel:${CONTACT_INFO.phone}`}>
                     <Phone className="mr-2 h-4 w-4" />
                     Call for Appointment
                   </a>
@@ -171,8 +170,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
              <Button asChild size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg">
-                <a href={`tel:${phoneNumber}`} className="flex items-center">
-                  Emergency: 080-2222 3456
+                <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center">
+                  Emergency: {CONTACT_INFO.displayPhone}
                 </a>
              </Button>
           </div>

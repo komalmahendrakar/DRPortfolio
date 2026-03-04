@@ -1,10 +1,10 @@
-
 "use client";
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
 import { Bone, Activity, Ambulance, Microscope, Zap, Thermometer, Phone } from 'lucide-react';
 import { Button } from './ui/button';
+import { CONTACT_INFO } from '@/lib/constants';
 
 const specializations = [
   {
@@ -46,8 +46,6 @@ const specializations = [
 ];
 
 export const Specializations = () => {
-  const phoneNumber = "+918022223456";
-
   return (
     <section className="py-24 bg-white" id="specializations">
       <div className="container mx-auto px-4">
@@ -75,7 +73,7 @@ export const Specializations = () => {
                   variant="ghost" 
                   className="p-0 h-auto font-semibold text-primary group-hover:translate-x-1 transition-transform"
                 >
-                  <a href={`tel:${phoneNumber}`} className="flex items-center">
+                  <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
                     Call to Book →
                   </a>

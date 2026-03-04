@@ -1,10 +1,10 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Menu, X, Phone } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,8 +25,6 @@ export const Navbar = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const phoneNumber = "+918022223456";
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -43,13 +41,13 @@ export const Navbar = () => {
             </Link>
           ))}
           <Button asChild variant="default" className="rounded-full px-6">
-            <a href={`tel:${phoneNumber}`}>Book Appointment</a>
+            <a href={`tel:${CONTACT_INFO.phone}`}>Book Appointment</a>
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-           <a href={`tel:${phoneNumber}`} className="text-primary">
+           <a href={`tel:${CONTACT_INFO.phone}`} className="text-primary">
             <Phone size={20} />
           </a>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
@@ -67,7 +65,7 @@ export const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="w-full py-6 rounded-xl">
-            <a href={`tel:${phoneNumber}`}>Call to Book</a>
+            <a href={`tel:${CONTACT_INFO.phone}`}>Call to Book</a>
           </Button>
         </div>
       )}

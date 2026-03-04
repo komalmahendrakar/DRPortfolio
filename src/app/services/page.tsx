@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -6,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, Phone } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 const services = [
   {
@@ -39,8 +39,6 @@ const services = [
 ];
 
 export default function ServicesPage() {
-  const phoneNumber = "+918022223456";
-
   return (
     <div className="pt-20">
       <section className="bg-primary/5 py-24">
@@ -72,7 +70,7 @@ export default function ServicesPage() {
                   </ul>
 
                   <Button asChild size="lg" className="rounded-full px-8">
-                    <a href={`tel:${phoneNumber}`}>
+                    <a href={`tel:${CONTACT_INFO.phone}`}>
                       <Phone className="mr-2 h-4 w-4" />
                       Call to Book Consultation
                     </a>
@@ -102,7 +100,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-headline font-bold">Ready to take the first step towards recovery?</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">We provide comprehensive diagnostics and personalized treatment plans for every patient.</p>
             <Button asChild variant="secondary" size="lg" className="rounded-full px-12 py-7 text-lg">
-              <a href={`tel:${phoneNumber}`}>Schedule Your Visit Now</a>
+              <a href={`tel:${CONTACT_INFO.phone}`}>Schedule Your Visit Now</a>
             </Button>
          </div>
       </section>

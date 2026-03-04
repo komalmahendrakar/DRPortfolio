@@ -3,10 +3,9 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, Calendar } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function ContactPage() {
-  const phoneNumber = "+918022223456";
-
   return (
     <div className="pt-20">
       <section className="bg-primary/5 py-24">
@@ -23,7 +22,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="space-y-12">
               <div className="space-y-6">
-                <h2 className="text-3xl font-headline font-bold">The Bangalore Hospital</h2>
+                <h2 className="text-3xl font-headline font-bold">{CONTACT_INFO.address.hospital}</h2>
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-xl text-primary">
                     <MapPin size={24} />
@@ -31,9 +30,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-lg">Address</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      202, Rashtriya Vidyalaya Road, <br />
-                      2nd Block, Basavanagudi, <br />
-                      Bengaluru, Karnataka – 560004
+                      {CONTACT_INFO.address.street}, <br />
+                      {CONTACT_INFO.address.city}, {CONTACT_INFO.address.state} – {CONTACT_INFO.address.pincode}
                     </p>
                   </div>
                 </div>
@@ -44,8 +42,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Phone Numbers</h3>
-                    <p className="text-muted-foreground">+91 802222 3456</p>
-                    <p className="text-muted-foreground">+91 98765 43210 (Direct)</p>
+                    <p className="text-muted-foreground">{CONTACT_INFO.displayPhone}</p>
+                    <p className="text-muted-foreground">{CONTACT_INFO.directPhone} (Direct)</p>
                   </div>
                 </div>
 
@@ -55,7 +53,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Email</h3>
-                    <p className="text-muted-foreground">contact@drpoorneshgowda.com</p>
+                    <p className="text-muted-foreground">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
               </div>
@@ -76,7 +74,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <Button asChild className="w-full py-6 rounded-xl text-lg">
-                  <a href={`tel:${phoneNumber}`} className="flex items-center justify-center">
+                  <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center justify-center">
                     <Calendar className="mr-2 h-5 w-5" />
                     Call to Book Appointment
                   </a>
