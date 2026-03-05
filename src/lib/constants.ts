@@ -5,7 +5,8 @@
 export const CONTACT_INFO = {
   phone: "7338604777",
   displayPhone: "+91 73386 04777",
-  directPhone: "+91 73386 04777",
+  secondaryPhone: "8317310513",
+  displaySecondaryPhone: "+91 83173 10513",
   email: "contact@drpoorneshgowda.com",
   address: {
     hospital: "Dr Poornesh Elite Ortho",

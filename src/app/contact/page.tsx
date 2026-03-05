@@ -41,8 +41,11 @@ export default function ContactPage() {
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Phone Number</h3>
-                    <p className="text-muted-foreground">{CONTACT_INFO.displayPhone}</p>
+                    <h3 className="font-bold text-lg">Phone Numbers</h3>
+                    <div className="space-y-1">
+                      <p className="text-muted-foreground">{CONTACT_INFO.displayPhone}</p>
+                      <p className="text-muted-foreground">{CONTACT_INFO.displaySecondaryPhone}</p>
+                    </div>
                   </div>
                 </div>
 
@@ -72,19 +75,27 @@ export default function ContactPage() {
                     <span className="text-destructive font-bold">Closed (Emergency Only)</span>
                   </div>
                 </div>
-                <Button asChild className="w-full py-6 rounded-xl text-lg">
-                  <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center justify-center">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Call to Book Appointment
-                  </a>
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Button asChild className="w-full py-6 rounded-xl text-lg">
+                    <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center justify-center">
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Call Number 1
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full py-6 rounded-xl text-lg">
+                    <a href={`tel:${CONTACT_INFO.secondaryPhone}`} className="flex items-center justify-center">
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Call Number 2
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
 
             <div className="space-y-6">
               <div className="rounded-3xl overflow-hidden soft-shadow border-4 border-white h-[600px] relative bg-slate-200">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.397682334749!2d77.57785871141416!3d12.93774571597841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1580d2aba445%3A0x18f2e5ac44fb9bee!2sDr%20Poornesh%20Elite%20Ortho%20%3A%20Best%20Spine%20Surgeon%20Bangalore!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3976!2d77.5804336!3d12.9377405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1580d2aba445%3A0x18f2e5ac44fb9bee!2sDr%20Poornesh%20Elite%20Ortho!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 

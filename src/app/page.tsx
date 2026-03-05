@@ -90,16 +90,19 @@ export default function Home() {
                 <p className="font-bold text-slate-900">— Dr. Poornesh Gowda</p>
               </div>
 
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button asChild size="lg" className="rounded-full px-8">
                   <a href={`tel:${CONTACT_INFO.phone}`}>
                     <Phone className="mr-2 h-4 w-4" />
-                    Call for Appointment
+                    Call Number 1
                   </a>
                 </Button>
-                <Link href="/contact">
-                  <Button variant="outline" size="lg" className="rounded-full px-8">Visit Clinic</Button>
-                </Link>
+                <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+                  <a href={`tel:${CONTACT_INFO.secondaryPhone}`}>
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call Number 2
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -171,7 +174,12 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
              <Button asChild size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg">
                 <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center">
-                  Emergency: {CONTACT_INFO.displayPhone}
+                  Emergency 1: {CONTACT_INFO.displayPhone}
+                </a>
+             </Button>
+             <Button asChild size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/10 text-white border-white/20 hover:bg-white/20">
+                <a href={`tel:${CONTACT_INFO.secondaryPhone}`} className="flex items-center">
+                  Emergency 2: {CONTACT_INFO.displaySecondaryPhone}
                 </a>
              </Button>
           </div>

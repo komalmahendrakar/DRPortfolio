@@ -67,9 +67,15 @@ export const Footer = () => {
                 <MapPin className="text-primary mt-1 shrink-0" size={18} />
                 <span>{CONTACT_INFO.address.hospital}, {CONTACT_INFO.address.street}, {CONTACT_INFO.address.city} - {CONTACT_INFO.address.pincode}</span>
               </li>
-              <li className="flex items-center space-x-3 text-slate-400">
-                <Phone className="text-primary shrink-0" size={18} />
-                <span>{CONTACT_INFO.displayPhone}</span>
+              <li className="flex flex-col space-y-2">
+                <div className="flex items-center space-x-3 text-slate-400">
+                  <Phone className="text-primary shrink-0" size={18} />
+                  <span>{CONTACT_INFO.displayPhone}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-400">
+                  <Phone className="text-primary shrink-0" size={18} />
+                  <span>{CONTACT_INFO.displaySecondaryPhone}</span>
+                </div>
               </li>
               <li className="flex items-center space-x-3 text-slate-400">
                 <Mail className="text-primary shrink-0" size={18} />

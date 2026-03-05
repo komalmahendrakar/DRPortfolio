@@ -64,9 +64,14 @@ export const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button asChild className="w-full py-6 rounded-xl">
-            <a href={`tel:${CONTACT_INFO.phone}`}>Call to Book</a>
-          </Button>
+          <div className="grid grid-cols-2 gap-2">
+            <Button asChild className="w-full py-6 rounded-xl text-xs">
+              <a href={`tel:${CONTACT_INFO.phone}`}>Call 1</a>
+            </Button>
+            <Button asChild variant="outline" className="w-full py-6 rounded-xl text-xs">
+              <a href={`tel:${CONTACT_INFO.secondaryPhone}`}>Call 2</a>
+            </Button>
+          </div>
         </div>
       )}
     </nav>
