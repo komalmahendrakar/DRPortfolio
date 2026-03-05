@@ -1,4 +1,3 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
@@ -6,8 +5,28 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Dr. Poornesh Gowda | Orthopedic & Spine Surgeon',
-  description: 'Specialized in Spine Surgery, Joint Replacement & Trauma Care. 9+ Years of experience at The Bangalore Hospital.',
+  title: 'Dr. Poornesh Gowda | Best Orthopedic & Spine Surgeon in Bangalore',
+  description: 'Dr. Poornesh Gowda is a leading Orthopedic and Spine Surgeon at The Bangalore Hospital, Jayanagar. Specialist in Spine Surgery, Joint Replacement, Complex Trauma & Back Pain treatment. 9+ years experience.',
+  keywords: [
+    'Dr. Poornesh Gowda',
+    'Orthopedic Surgeon Bangalore',
+    'Spine Surgeon Bangalore',
+    'Best Spine Surgeon Jayanagar',
+    'Back Pain Treatment Bangalore',
+    'Knee Replacement Surgery',
+    'Hip Replacement Surgeon',
+    'Slip Disc Surgery',
+    'Trauma Specialist',
+    'Fracture Treatment',
+    'Microdiscectomy Bangalore',
+    'Spinal Fusion Surgery',
+    'Spondylosis Treatment',
+    'Sciatica Specialist',
+    'The Bangalore Hospital Orthopedics'
+  ],
+  authors: [{ name: 'Dr. Poornesh Gowda' }],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
 };
 
 export default function RootLayout({

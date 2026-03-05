@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { CheckCircle, ShieldCheck, Clock, Users, Globe, Phone } from 'lucide-react';
-import Link from 'next/link';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Home() {
@@ -46,7 +45,7 @@ export default function Home() {
               <div className="relative z-10 rounded-3xl overflow-hidden soft-shadow transition-transform duration-500 group-hover:scale-[1.02]">
                 <Image 
                   src={profileImg?.imageUrl || ''} 
-                  alt="Dr. Poornesh Gowda" 
+                  alt="Dr. Poornesh Gowda - Best Spine Surgeon in Bangalore" 
                   width={600} 
                   height={800}
                   className="object-cover w-full h-[600px]"
@@ -63,20 +62,20 @@ export default function Home() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">About the Surgeon</h4>
-                <h3 className="text-4xl font-headline font-bold mb-6">Dr. Poornesh Gowda MS</h3>
+                <h2 className="text-4xl font-headline font-bold mb-6">Dr. Poornesh Gowda MS Ortho</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Dr. Poornesh Gowda is a renowned Orthopedic & Spine Surgeon with over 9 years of extensive experience in treating complex musculoskeletal disorders. He specializes in advanced spine surgeries, joint replacements, and high-impact trauma care.
+                  Dr. Poornesh Gowda is a renowned <strong>Orthopedic & Spine Surgeon in Bangalore</strong> with over 9 years of extensive experience in treating complex musculoskeletal disorders. He specializes in advanced <strong>spine surgeries, joint replacements, and high-impact trauma care</strong> at The Bangalore Hospital.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   "MS Orthopedics Specialist",
-                  "Spine Surgery Expert",
+                  "Advanced Spine Surgery",
                   "Joint Replacement Expert",
                   "Trauma & Fracture Specialist",
-                  "Minimally Invasive Surgeon",
-                  "Multilingual Specialist"
+                  "Minimally Invasive Surgery",
+                  "Back Pain Specialist"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center space-x-3">
                     <CheckCircle className="text-primary h-5 w-5 shrink-0" />
@@ -86,7 +85,7 @@ export default function Home() {
               </div>
 
               <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-primary">
-                <p className="italic text-slate-600 mb-2">"My mission is to provide personalized, compassionate, and advanced orthopedic care to help patients return to their active lives as quickly and safely as possible."</p>
+                <p className="italic text-slate-600 mb-2">"My mission is to provide personalized, compassionate, and advanced orthopedic care for back pain, joint issues, and fractures to help patients return to their active lives."</p>
                 <p className="font-bold text-slate-900">— Dr. Poornesh Gowda</p>
               </div>
 
@@ -94,13 +93,13 @@ export default function Home() {
                 <Button asChild size="lg" className="rounded-full px-8">
                   <a href={`tel:${CONTACT_INFO.phone}`}>
                     <Phone className="mr-2 h-4 w-4" />
-                    Call Number 1
+                    Call {CONTACT_INFO.displayPhone}
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full px-8">
                   <a href={`tel:${CONTACT_INFO.secondaryPhone}`}>
                     <Phone className="mr-2 h-4 w-4" />
-                    Call Number 2
+                    Call {CONTACT_INFO.displaySecondaryPhone}
                   </a>
                 </Button>
               </div>
@@ -115,22 +114,22 @@ export default function Home() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-headline font-bold mb-6">Why Choose Our Care?</h2>
-            <p className="text-muted-foreground">We combine clinical expertise with advanced technology and a patient-first approach.</p>
+            <h2 className="text-4xl font-headline font-bold mb-6">Expert Orthopedic Care in Bangalore</h2>
+            <p className="text-muted-foreground">We combine clinical expertise in spine and joint care with advanced technology and a patient-first approach.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Advanced Techniques", desc: "Utilizing the latest minimally invasive surgical methods for faster recovery.", icon: "⚡" },
-              { title: "Personalized Care", desc: "Every patient receives a unique treatment plan tailored to their specific lifestyle.", icon: "🤝" },
-              { title: "Multilingual", desc: "Communication in English, Hindi, Kannada, and Tamil for absolute comfort.", icon: "💬" },
-              { title: "Trusted Hospital", desc: "Affiliated with The Bangalore Hospital, a landmark in quality healthcare.", icon: "🏥" },
-              { title: "9+ Years Expertise", desc: "Extensive experience in handling complex and high-risk spine surgeries.", icon: "🏆" },
-              { title: "Full Recovery Path", desc: "Complete support from diagnosis through surgery to post-op rehabilitation.", icon: "🌱" },
+              { title: "Back & Neck Pain", desc: "Specialized treatment for chronic back pain, neck pain, and sciatica.", icon: "🧘" },
+              { title: "Spine Surgery", desc: "Expert in minimally invasive spine surgery for disc prolapse and stenosis.", icon: "🦴" },
+              { title: "Joint Replacement", desc: "Advanced knee and hip replacement for arthritis and joint pain.", icon: "🦾" },
+              { title: "Trauma Care", desc: "24/7 emergency care for complex fractures and accidental injuries.", icon: "🏥" },
+              { title: "Sports Injuries", desc: "Recovery for ACL tears, ligament injuries, and sports-related trauma.", icon: "🏃" },
+              { title: "Rehabilitation", desc: "Comprehensive post-operative support for a full and fast recovery.", icon: "🌱" },
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 rounded-3xl soft-shadow hover:bg-primary hover:text-white transition-all group">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform inline-block">{item.icon}</div>
-                <h4 className="text-xl font-headline font-bold mb-3">{item.title}</h4>
+                <h3 className="text-xl font-headline font-bold mb-3">{item.title}</h3>
                 <p className="opacity-80 leading-relaxed group-hover:text-white/90">{item.desc}</p>
               </div>
             ))}
@@ -142,15 +141,15 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
            <div className="text-center mb-12">
-            <h2 className="text-3xl font-headline font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-muted-foreground">Get answers to common concerns regarding orthopedic treatments.</p>
+            <h2 className="text-3xl font-headline font-bold mb-4">Orthopedic FAQ</h2>
+            <p className="text-muted-foreground">Common questions about spine surgery, joint replacement, and back pain.</p>
           </div>
           <div className="space-y-4">
             {[
-              { q: "Is spine surgery always necessary for back pain?", a: "No, surgery is typically the last resort. Most back pain cases are treated with physiotherapy, medication, and lifestyle adjustments. Surgery is only recommended when conservative treatments fail or neurological symptoms are present." },
-              { q: "How long is the recovery period for knee replacement?", a: "Most patients can start walking with support within 24 hours of surgery. Full recovery and returning to normal activities usually takes about 6 to 12 weeks with consistent rehabilitation." },
-              { q: "Do you offer video consultations?", a: "Yes, we offer video consultations for follow-ups and initial discussions for patients who cannot travel to the hospital. Please call to schedule." },
-              { q: "Which hospital is Dr. Gowda affiliated with?", a: "Dr. Poornesh Gowda is primarily associated with The Bangalore Hospital in Basavanagudi, Bengaluru." },
+              { q: "Is spine surgery necessary for chronic back pain?", a: "Not always. Most back pain can be managed with non-surgical treatments like physiotherapy and medication. Surgery is only considered for severe conditions like disc prolapse or when conservative methods fail." },
+              { q: "What is the recovery time for knee replacement surgery?", a: "Most patients start walking within 24 hours. A full return to normal activities usually takes 6 to 12 weeks with dedicated rehabilitation." },
+              { q: "Where can I find the best spine surgeon in Jayanagar?", a: "Dr. Poornesh Gowda practices at The Bangalore Hospital in Jayanagar, offering advanced spine and orthopedic care." },
+              { q: "Do you treat sports injuries and fractures?", a: "Yes, we provide comprehensive care for all types of fractures, sports injuries (like ACL tears), and complex trauma cases." },
             ].map((faq, i) => (
               <details key={i} className="group border rounded-2xl p-6 hover:bg-slate-50 transition-colors">
                 <summary className="flex justify-between items-center font-headline font-semibold text-lg cursor-pointer list-none">
@@ -169,17 +168,17 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
           <div className="max-w-2xl text-center md:text-left">
             <h2 className="text-3xl font-headline font-bold mb-4">Emergency Orthopedic or Trauma Case?</h2>
-            <p className="text-lg opacity-90">Our emergency team at The Bangalore Hospital is available 24/7 for critical orthopedic injuries.</p>
+            <p className="text-lg opacity-90">Our emergency team for fractures and trauma at The Bangalore Hospital is available 24/7.</p>
           </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
              <Button asChild size="lg" variant="secondary" className="rounded-full px-10 py-7 text-lg">
                 <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center">
-                  Emergency 1: {CONTACT_INFO.displayPhone}
+                  Call: {CONTACT_INFO.displayPhone}
                 </a>
              </Button>
              <Button asChild size="lg" variant="outline" className="rounded-full px-10 py-7 text-lg bg-white/10 text-white border-white/20 hover:bg-white/20">
                 <a href={`tel:${CONTACT_INFO.secondaryPhone}`} className="flex items-center">
-                  Emergency 2: {CONTACT_INFO.displaySecondaryPhone}
+                  Call: {CONTACT_INFO.displaySecondaryPhone}
                 </a>
              </Button>
           </div>
