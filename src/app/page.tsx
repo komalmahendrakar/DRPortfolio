@@ -5,6 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { CheckCircle, ShieldCheck, Clock, Users, Globe, Phone } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/constants';
+import { Testimonials } from '@/components/testimonials';
 
 export default function Home() {
   const profileImg = PlaceHolderImages.find(img => img.id === 'doctor-profile');
@@ -43,14 +44,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative group">
               <div className="relative z-10 rounded-3xl overflow-hidden soft-shadow transition-transform duration-500 group-hover:scale-[1.02]">
-                <Image 
-                  src={profileImg?.imageUrl || ''} 
-                  alt="Dr. Poornesh Gowda - Best Spine Surgeon in Bangalore" 
-                  width={600} 
-                  height={800}
-                  className="object-cover w-full h-[600px]"
-                  data-ai-hint="male doctor"
-                />
+              <Image 
+  src={profileImg?.imageUrl || ''} 
+  alt="Dr. Poornesh Gowda - Best Spine Surgeon in Bangalore" 
+  width={600} 
+  height={800}
+  className="object-contain w-full h-[600px]"
+  data-ai-hint="male doctor"
+/>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-secondary text-white p-8 rounded-3xl soft-shadow z-20 max-w-[280px]">
                 <p className="text-4xl font-bold mb-1">9+</p>
@@ -109,6 +110,8 @@ export default function Home() {
       </section>
 
       <Specializations />
+
+      <Testimonials />
 
       {/* Why Choose Us */}
       <section className="py-24 bg-slate-50">

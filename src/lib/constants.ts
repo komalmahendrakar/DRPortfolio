@@ -7,7 +7,7 @@ export const CONTACT_INFO = {
   displayPhone: "+91 73386 04777",
   secondaryPhone: "8317310513",
   displaySecondaryPhone: "+91 83173 10513",
-  email: "contact@drpoorneshgowda.com",
+  email: "gowdamsp@gmail.com",
   address: {
     hospital: "Dr Poornesh Elite Ortho",
     street: "The Bangalore Hospital, Rashtriya Vidyalaya Rd, 2nd Block, Jayanagar",

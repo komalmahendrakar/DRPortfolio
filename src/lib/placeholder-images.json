@@ -9,7 +9,7 @@
     {
       "id": "doctor-profile",
       "description": "Professional portrait of a male surgeon of Indian descent in blue surgical scrubs, light blue cap, and glasses with arms crossed",
-      "imageUrl": "/images/drImage.jpeg",
+      "imageUrl": "/images/mainpic.jpeg",
       "imageHint": "surgeon scrubs glasses"
     },
     {
@@ -35,6 +35,54 @@
       "description": "Specialized orthopedic oncology care",
       "imageUrl": "https://images.unsplash.com/photo-1763310225108-9e16920156f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZWRpY2FsJTIwb25jb2xvZ3l8ZW58MHx8fHwxNzcyMDkxNzYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "medical oncology"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Happy patient",
+      "imageUrl": "/images/testi/t1.jpeg",
+      "imageHint": "happy patient"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Smiling person",
+      "imageUrl": "/images/testi/t2.png",
+      "imageHint": "smiling person"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Happy senior citizen",
+      "imageUrl": "/images/testi/t3.png",
+      "imageHint": "happy senior citizen"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Grateful patient",
+      "imageUrl": "/images/testi/t4.png",
+      "imageHint": "grateful patient"
+    },
+    {
+      "id": "testimonial-5",
+      "description": "Happy family",
+      "imageUrl": "/images/testi/t5.png",
+      "imageHint": "happy family"
+    },
+    {
+      "id": "testimonial-6",
+      "description": "Young woman smiling",
+      "imageUrl": "/images/testi/t6.png",
+      "imageHint": "young woman smiling"
+    },
+    {
+      "id": "testimonial-7",
+      "description": "Man giving a thumbs up",
+      "imageUrl":"/images/testi/t7.png",
+      "imageHint": "man giving a thumbs up"
+    },
+    {
+      "id": "testimonial-8",
+      "description": "Smiling elderly woman",
+      "imageUrl":"/images/testi/t8.png",
+      "imageHint": "smiling elderly woman"
     }
   ]
 }
